@@ -8,3 +8,30 @@
 *{
     font-family: outfit;
 }
+
+@layer base{
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+.rich-text{ font-size: 15px; color:#7A7B7D; }
+.rich-text p{ margin-bottom: 16px; }
+.rich-text h1{ font-size: 36px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text h2{ font-size: 24px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text h3{ font-size: 18px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text h4{ font-size: 16px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text h5{ font-size: 14px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text h6{ font-size: 12px; font-weight: 800; color: #252525; margin-bottom: 16px; }
+.rich-text a{ color: #0070f3; text-decoration: none; }
+.rich-text a:hover{ text-decoration: underline; }
+.rich-text strong{ font-weight: 600; }
+.rich-text em{ font-style: italic; }
+.rich-text ul{ margin-bottom: 16px; }
+.rich-text ol{ margin-left: 30px; list-style-type: decimal; margin-bottom: 16px; }
+.rich-text li{ margin-bottom: 8px; }
