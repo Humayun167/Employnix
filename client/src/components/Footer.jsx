@@ -2,12 +2,13 @@ import { assets } from "../assets/assets";
 
 const Footer = () => {
     return (
-        <footer className="footer bg-neutral text-neutral-content items-center p-4">
+        <footer className="footer  text-neutral-content items-center p-4">
   <aside className="grid-flow-col items-center">
    <a href="">
     <img src={assets.logo} alt="" />
+    <p className="text-black">Copyright © {new Date().getFullYear()} - All right reserved</p>
    </a>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+  
   </aside>
   <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a>
