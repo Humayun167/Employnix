@@ -16,15 +16,16 @@ const Navbar = () => {
     <div className="shadow py-4">
       <div className="container px-4 2xl:px-20 mx-auto flex justify-between items-center">
         <img onClick={()=>navigate('/')} className="cursor-pointer" src={assets.logo} alt="" />
-        {user ? (
+        {
+          user 
+          ? 
           <div className="flex items-center gap-3">
             <Link to={"/application"}>Applied Job</Link>
             <p></p>
             <p className="max-sm:hidden">Hi , {user.firstName + " " + user.lastName}</p>
             <UserButton></UserButton>
           </div>
-        ) : (
-          <div className="flex gap-4 max-sm:text-xs">
+         :<div className="flex gap-4 max-sm:text-xs">
             <button onClick={e=>setShowRecruiterLogin(true)} className="text-gray-600">Recruiter Login</button>
             <button
               onClick={() => openSignIn()}
@@ -33,7 +34,7 @@ const Navbar = () => {
               Login
             </button>
           </div>
-        )}
+        }
       </div>
     </div>
   );
