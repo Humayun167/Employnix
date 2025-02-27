@@ -12,7 +12,7 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
 }
 
-
+// Hello
 createRoot(document.getElementById("root")).render(
   <ClerkProvider publishableKey={PUBLISHABLE_KEY}  afterSignOutUrl="/">
   <BrowserRouter>
