@@ -1,6 +1,6 @@
 
 import { assets } from './../assets/assets';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 const Dashboard = () => {
 
 
@@ -27,57 +27,35 @@ const Dashboard = () => {
          </div>
             
 
-        <div>
-        <div className="flex">
-            {/* Sidebar */}
-            <div className="inline-block min-h-screen border-r-2">
-                <ul className="flex flex-col items-start pt-5 text-gray-800">
-                    <NavLink className={({isActive})=>` flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && ' bg-blue-100 border-r-4 border-blue-500 '}`}  to={'/dashboard/add-job'} >
-                    <img src={assets.add_icon} alt="" />
-                    <p>Add Jobs</p>
+        <div className='flex items-start'>
+
+            {/* Left sidebar wiht optiohn add job, mmanage jobs , view jobs */}
+
+            <div className='inline-block min-h-screen border-r-2'>
+                <ul className='flex flex-col items-start pt-5 text-gray-800'>
+                    <NavLink className={({isActive})=>`flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && 'bg-blue-100 border-r-4 border-blue-500'}`} to={'/dashboard/add-job'} >
+                          <img className='min-w-4' src={assets.add_icon} alt="" />
+                        <p className='max-sm:hidden'>Add Job</p>
                     </NavLink>
 
-                    <NavLink className={({isActive})=>` flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && ' bg-blue-100 border-r-4 border-blue-500 '}`} to={'/dashboard/manage-job'} >
-                    <img src={assets.home_icon} alt="" />
-                    <p>Manage Jobs</p>
+                    <NavLink className={({isActive})=>`flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && 'bg-blue-100 border-r-4 border-blue-500'}`} to={'/dashboard/manage-jobs'} >
+                          <img className='min-w-4' src={assets.home_icon} alt="" />
+                        <p className='max-sm:hidden'>Manae Jobs</p>
                     </NavLink>
-                    <NavLink className={({isActive})=>` flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && ' bg-blue-100 border-r-4 border-blue-500 '}`} to={'/dashboard/view-application'} >
-                    <img src={assets.person_tick_icon} alt="" />
-                    <p>View Applications</p>
+                    
+                    <NavLink className={({isActive})=>`flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && 'bg-blue-100 border-r-4 border-blue-500'}`} to={'/dashboard/view-applications'} >
+                          <img className='min-w-4' src={assets.person_tick_icon} alt="" />
+                        <p className='max-sm:hidden'>View Application</p>
                     </NavLink>
                 </ul>
             </div>
-
-            {/* Main Content */}
-            <div className="w-3/4 p-4">
-                <h2 className="text-xl mb-4">Add Job</h2>
-                <form>
-                    <div className="mb-4">
-                        <label className="block text-gray-700">Job Title</label>
-                        <input type="text" className="w-full p-2 border rounded" />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700">Job Description</label>
-                        <textarea className="w-full p-2 border rounded"></textarea>
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700">Job Category</label>
-                        <input type="text" className="w-full p-2 border rounded" />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700">Job Location</label>
-                        <input type="text" className="w-full p-2 border rounded" />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700">Salary</label>
-                        <input type="text" className="w-full p-2 border rounded" />
-                    </div>
-                    <button type="submit" className="bg-blue-500 text-white p-2 rounded">Add</button>
-                </form>
-            </div>
+        <div>
+            <Outlet></Outlet>
         </div>
         </div>
 
+       
+         
 
         </div>
     );
