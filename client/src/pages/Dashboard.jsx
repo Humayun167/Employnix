@@ -1,4 +1,3 @@
-
 import { assets } from './../assets/assets';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 const Dashboard = () => {
