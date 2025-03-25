@@ -15,7 +15,8 @@ const Navbar = () => {
   return (
     <div className="shadow py-4">
       <div className="container px-4 2xl:px-20 mx-auto flex justify-between items-center">
-        <img onClick={()=>navigate('/')} className="cursor-pointer" src={assets.logo} alt="" />
+        {/* <img  className="cursor-pointer" src={assets.logo} alt="" /> */}
+        <button onClick={()=>navigate('/')}  className="cursor-pointer text-2xl font-bold"> <span class="text-black ">Employ</span><span class="text-violet-700">Nix</span></button>
         {
           user 
           ? 

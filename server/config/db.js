@@ -1,14 +1,12 @@
 import mongoose from "mongoose";
 
+// function to connect ot the database
+const connectDB = async()=>{
+    mongoose.connection.on('connected',()=>console.log("database connected"))
 
-// function to connect to the database
 
-const connectDB = async () => {
-
-    mongoose.connection.on('connected', () => console.log('Connected to MongoDB'));
-
-    await mongoose.connect(`${process.env.MONGODB_URI}/job-portal `)
-
+    await mongoose.connect(`${process.env.MONGODB_URI}/employnix`)
+     
 }
 
-export default connectDB;
+export default connectDB; 
