@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer  text-neutral-content items-center p-4">
   <aside className="grid-flow-col items-center">
    <a href="">
-    <img src={assets.logo} alt="" />
+   <button onClick={()=>navigate('/')}  className="cursor-pointer text-2xl font-bold"> <span class="text-black ">Employ</span><span class="text-violet-700">Nix</span></button>
     <p className="text-black">Copyright © {new Date().getFullYear()} - All right reserved</p>
    </a>
   
